@@ -172,4 +172,13 @@ section {
     color: #fff;
     background-color: rgb(31, 29, 29);
 }
+.skils p {
+    font-size: 30px;
+    margin: 10px;
+    height: px;
+}
+.logo-skil img{
+    width: 150px;
+    height: 150px;
+}
 
