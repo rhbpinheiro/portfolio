@@ -111,8 +111,30 @@ section {
 .arrow i {
     width: 30px;
     height: 30px;
-}   
-.about p {
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+
+}
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+#animation {
+    transition: 300ms;
+}
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+.active {
+    display: block !important;
+}     
+.about-div {
+    display: none;
+    background-color: rgba(255,255,255,0.3);
+    border-radius:10px;
+    padding: 10px;
     max-width: 600px;
     margin: 0 auto;
 }
