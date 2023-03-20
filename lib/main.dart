@@ -12,6 +12,8 @@ import 'package:rodolpho_pinheiro/utils/app_routes.dart';
 import 'model/project_model.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
