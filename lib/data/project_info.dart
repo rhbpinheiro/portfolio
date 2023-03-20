@@ -1,3 +1,4 @@
+import 'package:rodolpho_pinheiro/constants/constants.dart';
 import 'package:rodolpho_pinheiro/model/project_model.dart';
 
 final projectList = [
@@ -9,7 +10,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/portfolio.png',
-    gitHubUrl: '',
+    gitHubUrl: portfolioUri,
   ),
   ProjectModel(
     title: 'App Despesas Pessoais',
@@ -19,7 +20,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/despesas_pessoais.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/-personal_expenses',
+    gitHubUrl: personalExpensesUri,
   ),
   ProjectModel(
     title: 'Calculadora Imc',
@@ -29,7 +30,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/calc_imc.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/react-calc-imc',
+    gitHubUrl: calcImcUri,
   ),
   ProjectModel(
     title: 'App Devstravel',
@@ -39,7 +40,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/devstravel.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/devstravel',
+    gitHubUrl: devstravelUri,
   ),
   ProjectModel(
     title: 'App Vamos Cozinhar?',
@@ -49,7 +50,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/vamos_cozinhar.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/vamos_cozinhar',
+    gitHubUrl: vamosCozinharUri,
   ),
   ProjectModel(
     title: 'Clone Netflix',
@@ -59,7 +60,7 @@ final projectList = [
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
     imageUrl: '../../assets/images/netflix.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/clonenetflix',
+    gitHubUrl: clonenetflixUri,
   ),
   ProjectModel(
     title: 'Tic-Tac-Toe',
@@ -68,7 +69,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../assets/images/tictactoe.png',
-    gitHubUrl: 'https://github.com/rhbpinheiro/tic-tac-toe-dc',
+    imageUrl: '../../assets/images/tic_tac_toe.png',
+    gitHubUrl: tictactoeUri,
   ),
 ];

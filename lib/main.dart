@@ -6,7 +6,6 @@ import 'package:rodolpho_pinheiro/pages/project_detail_page.dart';
 import 'package:rodolpho_pinheiro/pages/project_page.dart';
 import 'package:rodolpho_pinheiro/widgets/aboutme_widget.dart';
 import 'package:rodolpho_pinheiro/pages/home_page.dart';
-import 'package:rodolpho_pinheiro/widgets/project_detail_widget.dart';
 import 'package:rodolpho_pinheiro/widgets/projects_widget.dart';
 import 'package:rodolpho_pinheiro/utils/app_routes.dart';
 
@@ -42,7 +41,7 @@ class MyApp extends StatelessWidget {
           AppRoutes.ABOUTME: (context) => AbouteMePage(),
           AppRoutes.PROJECTS: (context) => ProjectPage(),
           AppRoutes.PROJECT_DETAIL: (context) => ProjectDetailPage(),
-          AppRoutes.CONTACT: (context) => ProjectDetailPage(),
+          // AppRoutes.CONTACT: (context) => ProjectDetailPage(),
         },
       ),
     );

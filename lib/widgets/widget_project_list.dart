@@ -32,10 +32,7 @@ class WidgetProjectList extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ChangeNotifierProvider.value(
                   value: loadProject[index],
-                  child: const WidgetProject(
-                    width: 450,
-                    height: 250,
-                  ),
+                  child: const WidgetProject(),
                 );
               },
             )

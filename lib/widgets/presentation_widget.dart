@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:rodolpho_pinheiro/constants/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PresentationWidget extends StatelessWidget {
   const PresentationWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchInBrowser(Uri url) async {
+      if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+        throw "Can not launch url";
+      }
+    }
+
     return Container(
       width: context.screenWidth,
       height: context.percentHeight(.8),
@@ -67,14 +74,18 @@ class PresentationWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      _launchInBrowser(gitHubUri);
+                    },
                     icon: const Icon(
                       FontAwesome.github,
                       color: Colors.white,
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _launchInBrowser(linkedinUri);
+                    },
                     icon: const Icon(
                       FontAwesome.linkedin,
                       color: Colors.white,
@@ -87,7 +98,6 @@ class PresentationWidget extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                 
                 ],
               ),
             ],

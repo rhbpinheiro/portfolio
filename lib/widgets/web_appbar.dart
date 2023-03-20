@@ -25,20 +25,25 @@ class WebAppBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                border: Border(
-                  left: BorderSide(color: colorGreyBorder, width: 10),
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed(AppRoutes.HOME);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  border: Border(
+                    left: BorderSide(color: colorGreyBorder, width: 10),
+                  ),
                 ),
-              ),
-              child: const Text(
-                'Rodolpho\n'
-                'Pinheiro',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                child: const Text(
+                  'Rodolpho\n'
+                  'Pinheiro',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -68,7 +73,6 @@ class WebAppBar extends StatelessWidget {
           style: hoverButton,
           onPressed: () {
             Navigator.of(context).pushReplacementNamed(AppRoutes.PROJECTS);
-
           },
           child: const Text(
             'Projetos',
@@ -76,9 +80,7 @@ class WebAppBar extends StatelessWidget {
         ),
         TextButton(
           style: hoverButton,
-          onPressed: () {
-            
-          },
+          onPressed: () {},
           child: const Text(
             'Contato',
           ),

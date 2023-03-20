@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
 import '../model/project_model.dart';
-import '../widgets/aboutme_widget.dart';
-import '../widgets/projects_widget.dart';
+import '../utils/app_routes.dart';
 import '../widgets/widget_footer.dart';
-import '../widgets/presentation_widget.dart';
 import '../widgets/mobile_appbar.dart';
 import '../widgets/web_appbar.dart';
+import '../widgets/widget_project_detail.dart';
 
 class ProjectDetailPage extends StatelessWidget {
   const ProjectDetailPage({Key? key}) : super(key: key);
@@ -29,20 +28,10 @@ class ProjectDetailPage extends StatelessWidget {
                   preferredSize: Size(double.infinity, 85),
                   child: WebAppBar(),
                 ),
-          body: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 1400),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Text(project.title!,
-                      ),
-                  const WidgetFooter(),
-                ],
-              ),
-            ),
-          ),
+          body: ProjectDetail(project: project),
         );
       },
     );
   }
 }
+

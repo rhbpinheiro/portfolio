@@ -29,9 +29,22 @@ class ProjectPage extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 1400),
             child: SingleChildScrollView(
               child: Column(
-                children: const [
-                  ProjectsWidget(),
-                  WidgetFooter(),
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: context.screenWidth,
+                    color: Colors.black87,
+                    padding: EdgeInsets.only(top: 20),
+                    child: const Text(
+                      'Projetos',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 33,
+                      ),
+                    ),
+                  ),
+                  const ProjectsWidget(),
+                  const WidgetFooter(),
                 ],
               ),
             ),
