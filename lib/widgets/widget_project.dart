@@ -21,11 +21,12 @@ class WidgetProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      Future<void> _launchInBrowser(Uri url) async {
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw "Can not launch url";
+    Future<void> _launchInBrowser(Uri url) async {
+      if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+        throw "Can not launch url";
+      }
     }
-  }
+
     final project = Provider.of<ProjectModel>(context, listen: false);
     return Container(
       width: context.percentWidth(.6),
@@ -54,9 +55,7 @@ class WidgetProject extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            style: ButtonStyle(
-            
-            ),
+            style: hoverElevatedButton,
             onPressed: () {
               Navigator.of(context).pushReplacementNamed(
                 AppRoutes.PROJECT_DETAIL,

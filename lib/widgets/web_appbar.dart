@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rodolpho_pinheiro/constants/constants.dart';
 import 'package:rodolpho_pinheiro/utils/app_routes.dart';
+import 'package:rodolpho_pinheiro/widgets/widget_logo.dart';
 
 class WebAppBar extends StatelessWidget {
   const WebAppBar({Key? key}) : super(key: key);
@@ -13,42 +14,7 @@ class WebAppBar extends StatelessWidget {
       backgroundColor: backgroundHomePage,
       title: Container(
         margin: const EdgeInsets.only(left: 20),
-        child: Card(
-          elevation: 5,
-          color: Colors.transparent,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: ClipPath(
-            clipper: ShapeBorderClipper(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.of(context).pushReplacementNamed(AppRoutes.HOME);
-              },
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  border: Border(
-                    left: BorderSide(color: colorGreyBorder, width: 10),
-                  ),
-                ),
-                child: const Text(
-                  'Rodolpho\n'
-                  'Pinheiro',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        child: WidgetLogo(16),
       ),
       actions: [
         TextButton(
@@ -92,3 +58,4 @@ class WebAppBar extends StatelessWidget {
     );
   }
 }
+

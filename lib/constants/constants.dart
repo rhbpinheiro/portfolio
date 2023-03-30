@@ -83,3 +83,13 @@ final ButtonStyle hoverButton = ButtonStyle(
     return const Color(0XFFFFFFFF);
   }),
 );
+final ButtonStyle hoverElevatedButton = ButtonStyle(
+
+  backgroundColor:
+      MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+    if (states.contains(MaterialState.hovered)) {
+      return Color.fromARGB(255, 79, 82, 80);
+    }
+    return Colors.grey;
+  }),
+);

@@ -25,6 +25,13 @@ class WidgetProjectList extends StatelessWidget {
         ),
         child: Column(
           children: [
+            const Text(
+              'Projetos',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 33,
+              ),
+            ),
             ListView.builder(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,

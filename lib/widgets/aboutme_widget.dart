@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:rodolpho_pinheiro/constants/constants.dart';
 
-import 'widget_footer.dart';
-
 class AboutMeWidget extends StatelessWidget {
   const AboutMeWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(
+              "https://cdn.pixabay.com/photo/2022/04/03/15/33/world-wide-web-7109276_960_720.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
       width: context.screenWidth,
       height: context.percentHeight(.6),
-      color: Colors.black87,
-      child: Padding(
+      child: Container(
+        color: Colors.black54,
         padding: EdgeInsets.only(
           left: context.percentWidth(.3),
           right: context.percentWidth(.3),
@@ -31,7 +36,6 @@ class AboutMeWidget extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10.0),
               child: Text(
-                
                 'Em 2021, decidi mudar para a área de tecnologia.'
                 ' Desde outubro de 2022, atuo como Desenvolvedor Front-End Web/Mobile'
                 ' Flutter, colaborando com o time para desenvolver novas funcionalidades'
