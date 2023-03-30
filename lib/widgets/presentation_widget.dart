@@ -44,8 +44,8 @@ class PresentationWidget extends StatelessWidget {
                     ),
                     child: const Image(
                       width: 150,
-                      image: AssetImage(
-                        '../../assets/images/perfil.png',
+                      image: NetworkImage(
+                        '../../web/images/perfil.png',
                       ),
                     ),
                   ),
@@ -122,7 +122,7 @@ class PresentationWidget extends StatelessWidget {
                       Column(
                         children: const [
                           ImageIcon(
-                            AssetImage('../../assets/images/flutter.png'),
+                            NetworkImage('../../web/images/flutter.png'),
                             color: Colors.white,
                             size: 30,
                           ),
@@ -141,7 +141,7 @@ class PresentationWidget extends StatelessWidget {
                       Column(
                         children: const [
                           ImageIcon(
-                            AssetImage('../../assets/images/dart.png'),
+                            NetworkImage('../../web/images/dart.png'),
                             color: Colors.white,
                             size: 30,
                           ),

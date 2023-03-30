@@ -48,7 +48,7 @@ class WidgetProject extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: Image(
                   width: double.infinity,
-                  image: AssetImage(
+                  image: NetworkImage(
                     project.imageUrl!,
                   ),
                   fit: BoxFit.contain),

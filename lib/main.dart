@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:provider/provider.dart';
 import 'package:rodolpho_pinheiro/model/project_list_model.dart';
 import 'package:rodolpho_pinheiro/pages/abouteme_page.dart';
@@ -12,8 +13,7 @@ import 'package:rodolpho_pinheiro/utils/app_routes.dart';
 import 'model/project_model.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 
@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-            ChangeNotifierProvider(
+        ChangeNotifierProvider(
           create: (_) => ProjectListModel(),
         ),
-            ChangeNotifierProvider(
+        ChangeNotifierProvider(
           create: (_) => ProjectModel(),
         ),
       ],
@@ -49,4 +49,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
