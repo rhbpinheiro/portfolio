@@ -25,15 +25,12 @@ class ProjectPage extends StatelessWidget {
                   preferredSize: Size(double.infinity, 85),
                   child: WebAppBar(),
                 ),
-          body: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 1400),
-            child: SingleChildScrollView(
-              child: Column(
-                children: const [
-                  ProjectsWidget(),
-                  WidgetFooter(),
-                ],
-              ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: const [
+                ProjectsWidget(),
+                WidgetFooter(),
+              ],
             ),
           ),
         );

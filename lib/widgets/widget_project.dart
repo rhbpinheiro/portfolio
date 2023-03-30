@@ -37,6 +37,7 @@ class WidgetProject extends StatelessWidget {
         children: [
           Text(
             project.title!,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 25,
@@ -46,12 +47,11 @@ class WidgetProject extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image(
-                  width: double.infinity,
-                  image: NetworkImage(
-                    project.imageUrl!,
-                  ),
-                  fit: BoxFit.contain),
+              child: Image.asset(
+                      project.imageUrl!,
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
             ),
           ),
           ElevatedButton(

@@ -42,11 +42,10 @@ class PresentationWidget extends StatelessWidget {
                         Radius.circular(75),
                       ),
                     ),
-                    child: const Image(
+                    child: Image.asset(
+                      '../../assest/images/perfil.png',
                       width: 150,
-                      image: NetworkImage(
-                        '../../web/images/perfil.png',
-                      ),
+                      height: 150,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -120,16 +119,16 @@ class PresentationWidget extends StatelessWidget {
                     runSpacing: 15,
                     children: [
                       Column(
-                        children: const [
-                          ImageIcon(
-                            NetworkImage('../../web/images/flutter.png'),
-                            color: Colors.white,
-                            size: 30,
+                        children: [
+                          Image.asset(
+                            '../../assets/images/flutter.png',
+                            width: 30,
+                            height: 30,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text(
+                          const Text(
                             'Flutter',
                             style: TextStyle(
                               color: Colors.white,
@@ -139,16 +138,16 @@ class PresentationWidget extends StatelessWidget {
                         ],
                       ),
                       Column(
-                        children: const [
-                          ImageIcon(
-                            NetworkImage('../../web/images/dart.png'),
-                            color: Colors.white,
-                            size: 30,
+                        children: [
+                          Image.asset(
+                            '../../assets/images/dart.png',
+                            width: 30,
+                            height: 30,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text(
+                          const Text(
                             'Dart',
                             style: TextStyle(
                               color: Colors.white,

@@ -1,0 +1,7 @@
+let useHtml = // ... _flutter.loader.loadEntrypoint({ onEntrypointLoaded: async
+function (engineInitializer) { // Run-time engine configuration let config = {
+renderer: useHtml ? 'html' : 'canvaskit', }; let appRunner = await
+engineInitializer.initializeEngine(config); await appRunner.runApp(); }, });
+
+flutter build web --release
+

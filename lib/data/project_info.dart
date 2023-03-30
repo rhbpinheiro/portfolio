@@ -9,7 +9,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/portfolio.png',
+    imageUrl: '../../assets/images/portfolio.png',
     gitHubUrl: portfolioUri,
   ),
   ProjectModel(
@@ -19,7 +19,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/despesas_pessoais.png',
+    imageUrl: '../../assets/images/despesas_pessoais.png',
     gitHubUrl: personalExpensesUri,
   ),
   ProjectModel(
@@ -29,7 +29,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/calc_imc.png',
+    imageUrl: '../../assets/images/calc_imc.png',
     gitHubUrl: calcImcUri,
   ),
   ProjectModel(
@@ -39,7 +39,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/devstravel.png',
+    imageUrl: '../../assets/images/devstravel.png',
     gitHubUrl: devstravelUri,
   ),
   ProjectModel(
@@ -49,7 +49,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/vamos_cozinhar.png',
+    imageUrl: '../../assets/images/vamos_cozinhar.png',
     gitHubUrl: vamosCozinharUri,
   ),
   ProjectModel(
@@ -59,7 +59,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/netflix.png',
+    imageUrl: '../../assets/images/netflix.png',
     gitHubUrl: clonenetflixUri,
   ),
   ProjectModel(
@@ -69,7 +69,7 @@ final projectList = [
     ' nulla pariatur Lorem cillum culpa ullamco Lorem amet id deserunt laboris. Sunt'
     ' ea ullamco laboris sit do pariatur minim commodo do in elit. Magna mollit nisi'
     ' enim nisi nostrud adipisicing laborum eiusmod tempor exercitation cillum tempor.',
-    imageUrl: '../../web/images/tic_tac_toe.png',
+    imageUrl: '../../assets/images/tic_tac_toe.png',
     gitHubUrl: tictactoeUri,
   ),
 ];
