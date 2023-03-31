@@ -29,8 +29,12 @@ class AbouteMePage extends StatelessWidget {
               : null,
           body: SingleChildScrollView(
             child: Column(
-              children: const [
-                AboutMeWidget(),
+              children: [
+                AboutMeWidget(
+                  left: constraints.maxWidth < mobileBreakpoint ? .1 : .2,
+                  right: constraints.maxWidth < mobileBreakpoint ? .1 : .2,
+                  height: constraints.maxWidth < mobileBreakpoint ? .8 : .6,
+                ),
                 WidgetFooter(),
               ],
             ),
