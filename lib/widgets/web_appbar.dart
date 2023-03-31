@@ -11,7 +11,7 @@ class WebAppBar extends StatelessWidget {
     return AppBar(
       elevation: 0,
       toolbarHeight: 85,
-      backgroundColor: backgroundHomePage,
+      backgroundColor: Colors.black,
       title: Container(
         margin: const EdgeInsets.only(left: 20),
         child: WidgetLogo(16),

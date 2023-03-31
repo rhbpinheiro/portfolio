@@ -19,37 +19,39 @@ class AboutMeWidget extends StatelessWidget {
       child: Container(
         color: Colors.black54,
         padding: EdgeInsets.only(
-          left: context.percentWidth(.3),
-          right: context.percentWidth(.3),
+          left: context.percentWidth(.1),
+          right: context.percentWidth(.1),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'Sobre mim',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 38,
-              ),
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Text(
-                'Em 2021, decidi mudar para a área de tecnologia.'
-                ' Desde outubro de 2022, atuo como Desenvolvedor Front-End Web/Mobile'
-                ' Flutter, colaborando com o time para desenvolver novas funcionalidades'
-                ' para aplicativos e sites, sempre buscando aprimorar meus conhecimentos.'
-                'Em equipe, sou proativo, comprometido, humilde e sempre busco aprender'
-                ' e ajudar. Estou cursando Formação Full-Stack e Análise'
-                ' e Desenvolvimento de Sistemas.',
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                'Sobre mim',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 18,
+                  fontSize: 38,
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text(
+                  'Em 2021, seguindo a orientação de alguns amigos, decidi mudar para'
+                  ' a área de tecnologia.'
+                  ' Desde outubro de 2022, atuo como Desenvolvedor Front-End Web/Mobile'
+                  ' Flutter, colaborando com o time para desenvolver novas funcionalidades'
+                  ' para aplicativos e sites, sempre buscando aprimorar meus conhecimentos.'
+                  'Em equipe, sou proativo, comprometido, humilde e sempre busco aprender'
+                  ' e ajudar. ',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

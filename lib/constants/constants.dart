@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 const mobileBreakpoint = 800;
@@ -15,9 +13,9 @@ extension SizeExtensions on BuildContext {
   double percentHeight(double percent) => screenHeight * percent;
 }
 
-final Color backgroundHomePage = const Color(0xFF141316);
+const Color backgroundHomePage = Color(0xFF141316);
 
-final Color colorGreyBorder = Color(0xFF989C9A);
+const Color colorGreyBorder = Color(0xFF989C9A);
 
 final Uri portfolioUri = Uri(
   scheme: 'https',
@@ -64,8 +62,17 @@ final Uri linkedinUri = Uri(
   host: 'www.linkedin.com',
   path: '/in/rodolphopinheiro/',
 );
-
-
+final Uri instagramUri = Uri(
+  scheme: 'https',
+  host: 'www.instagram.com',
+  path: '/rodolpho_pinheiro/',
+);
+final Uri whatsappUri = Uri(
+  scheme: 'https',
+  host: 'api.whatsapp.com',
+  path: '/send',
+  queryParameters: {'phone': '556196200181'},
+);
 
 final ButtonStyle hoverButton = ButtonStyle(
   textStyle:
@@ -84,12 +91,11 @@ final ButtonStyle hoverButton = ButtonStyle(
   }),
 );
 final ButtonStyle hoverElevatedButton = ButtonStyle(
-
   backgroundColor:
       MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
     if (states.contains(MaterialState.hovered)) {
-      return Color.fromARGB(255, 79, 82, 80);
+      return const Color.fromARGB(255, 79, 82, 80);
     }
-    return Colors.grey;
+    return const Color(0XFF0b1639);
   }),
 );

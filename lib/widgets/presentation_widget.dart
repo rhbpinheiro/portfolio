@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:rodolpho_pinheiro/constants/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PresentationWidget extends StatelessWidget {
   const PresentationWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Future<void> _launchInBrowser(Uri url) async {
-      if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-        throw "Can not launch url";
-      }
-    }
-
     return Container(
       width: context.screenWidth,
       height: context.percentHeight(.8),
@@ -27,269 +21,242 @@ class PresentationWidget extends StatelessWidget {
       child: Container(
         width: context.screenWidth,
         color: Colors.black54,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20, bottom: 20),
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-              child: Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black54,
-                      border: Border.all(width: 3, color: colorGreyBorder),
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(75),
-                      ),
-                    ),
-                    child: Image.asset(
-                      '../../assest/images/perfil.png',
-                      width: 150,
-                      height: 150,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black54,
+                    border: Border.all(width: 3, color: colorGreyBorder),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(75),
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    'Olá, sou',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 38,
-                    ),
+                  child: Image.asset(
+                    'assets/images/perfil.png',
+                    width: 150,
+                    height: 150,
                   ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Rodolpho Pinheiro',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 38,
-                    ),
-                    textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  'Olá, sou',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 38,
                   ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Desenvolvedor Front-End Flutter Web e Mobile',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                    textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Rodolpho Pinheiro',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 38,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        onPressed: () async {
-                          _launchInBrowser(gitHubUri);
-                        },
-                        icon: const Icon(
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Desenvolvedor Front-End Flutter Web e Mobile',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Minhas Stacks',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: 15,
+                  runSpacing: 15,
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/flutter.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          'Flutter',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/dart.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          'Dart',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(
+                          FontAwesome.html5,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'HTML5',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(
+                          FontAwesome.css3,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'CSS3',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(
+                          FontAwesome.js,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'JavaScript',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(FontAwesome.react,
+                            color: Colors.white, size: 30),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'React',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(
                           FontAwesome.github,
                           color: Colors.white,
+                          size: 30,
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          _launchInBrowser(linkedinUri);
-                        },
-                        icon: const Icon(
-                          FontAwesome.linkedin,
-                          color: Colors.white,
+                        SizedBox(
+                          height: 5,
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          BoxIcons.bxl_gmail,
-                          color: Colors.white,
+                        Text(
+                          'GitHub',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Minhas Stacks',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
+                      ],
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 15,
-                    runSpacing: 15,
-                    children: [
-                      Column(
-                        children: [
-                          Image.asset(
-                            '../../assets/images/flutter.png',
-                            width: 30,
-                            height: 30,
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          const Text(
-                            'Flutter',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Image.asset(
-                            '../../assets/images/dart.png',
-                            width: 30,
-                            height: 30,
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          const Text(
-                            'Dart',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            FontAwesome.html5,
+                    Column(
+                      children: const [
+                        Icon(
+                          Bootstrap.git,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Git',
+                          style: TextStyle(
                             color: Colors.white,
-                            size: 30,
+                            fontSize: 12,
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'HTML5',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            FontAwesome.css3,
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(
+                          BoxIcons.bxl_typescript,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'TypeScript',
+                          style: TextStyle(
                             color: Colors.white,
-                            size: 30,
+                            fontSize: 12,
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'CSS3',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            FontAwesome.js,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'JavaScript',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(FontAwesome.react,
-                              color: Colors.white, size: 30),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'React',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            FontAwesome.github,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'GitHub',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            Bootstrap.git,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Git',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-                          Icon(
-                            BoxIcons.bxl_typescript,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'TypeScript',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
-                ],
-              ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+              ],
             ),
           ),
         ),

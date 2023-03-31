@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/constants.dart';
 import '../model/project_model.dart';
 import '../utils/app_routes.dart';
+import '../widgets/menu_drawer.dart';
 import '../widgets/widget_footer.dart';
 import '../widgets/mobile_appbar.dart';
 import '../widgets/web_appbar.dart';
@@ -19,6 +20,7 @@ class ProjectDetailPage extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Scaffold(
+
           appBar: constraints.maxWidth < mobileBreakpoint
               ? const PreferredSize(
                   preferredSize: Size(double.infinity, 56),
@@ -28,6 +30,9 @@ class ProjectDetailPage extends StatelessWidget {
                   preferredSize: Size(double.infinity, 85),
                   child: WebAppBar(),
                 ),
+             endDrawer: constraints.maxWidth < mobileBreakpoint
+                  ? const MenuDrawer()
+                  : null,       
           body: ProjectDetail(project: project),
         );
       },

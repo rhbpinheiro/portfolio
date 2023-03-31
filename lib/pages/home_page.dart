@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
+import '../widgets/menu_drawer.dart';
 import '../widgets/widget_footer.dart';
 import '../widgets/presentation_widget.dart';
 import '../widgets/mobile_appbar.dart';
@@ -23,6 +24,9 @@ class HomePage extends StatelessWidget {
                   preferredSize: Size(double.infinity, 85),
                   child: WebAppBar(),
                 ),
+          endDrawer: constraints.maxWidth < mobileBreakpoint
+              ? const MenuDrawer()
+              : null,
           body: SingleChildScrollView(
             child: Column(
               children: const [
